@@ -70,10 +70,10 @@ This is the **home page** showing all tasks fetched from the backend:
 
 ### ⚡ Executing a Task
 
-✅ **Before pressing the “Execute” button:**  
+✅ **Before pressing the “Run” button:**  
 ![Execute task - before](screenshots/execute-task-before.png)
 
-✅ **After pressing the “Execute” button and seeing the result:**  
+✅ **After pressing the “Run” button and seeing the result:**  
 ![Execute task - after](screenshots/execute-task-after.png)
 
 ---
