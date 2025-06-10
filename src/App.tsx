@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Tabs } from 'antd';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
+import TaskExecution from './components/TaskExecution';
+import 'antd/dist/reset.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const { Header, Content } = Layout;
+
+const App = () => (
+  <Layout style={{ minHeight: '100vh' }}>
+    <Header style={{ color: 'white', fontSize: '24px' }}>
+      Kaiburr Task Manager
+    </Header>
+    <Content style={{ padding: '20px' }}>
+      <Tabs defaultActiveKey="1">
+        <Tabs.TabPane tab="Create Task" key="1">
+          <TaskForm />
+        </Tabs.TabPane>
+        <Tabs.TabPane tab="View & Manage Tasks" key="2">
+          <TaskList />
+        </Tabs.TabPane>
+        <Tabs.TabPane tab="Execution Output" key="3">
+          <TaskExecution />
+        </Tabs.TabPane>
+      </Tabs>
+    </Content>
+  </Layout>
+);
 
 export default App;
